@@ -11,6 +11,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/app-users")
+@CrossOrigin(origins = "http://localhost:4200")
+
 public class UserAppController {
 
     @Autowired
@@ -36,7 +38,7 @@ public class UserAppController {
         if (!userAppService.findById(id).isPresent()) {
             return ResponseEntity.notFound().build();
         }
-        userAppDTO.setId(id);
+        //userAppDTO.setId(id);
         return ResponseEntity.ok(userAppService.save(userAppDTO));
     }
 

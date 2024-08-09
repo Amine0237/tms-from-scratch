@@ -8,9 +8,10 @@ import org.springframework.stereotype.Service;
 public class UserAppMapper {
     public UserApp toEntity(UserAppDTO userAppDTO){
         UserApp userApp = new UserApp();
-        userApp.setEmail(userAppDTO.getEmail());
         userApp.setId(userAppDTO.getId());
+        userApp.setEmail(userAppDTO.getEmail());
         userApp.setPassword(userAppDTO.getPassword());
+        userApp.setUsername(userAppDTO.getUsername());
         userApp.setFirstName(userAppDTO.getFirstName());
         userApp.setLastName(userAppDTO.getLastName());
 

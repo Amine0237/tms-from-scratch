@@ -28,7 +28,8 @@ public class UserAppService {
     }
 
     public UserApp save(UserAppDTO userAppDTO) {
-        return userAppRepository.save(userAppMapper.toEntity(userAppDTO));
+        UserApp userApp = userAppMapper.toEntity(userAppDTO);
+        return userAppRepository.save(userApp);
     }
 
     public void deleteById(Long id) {
